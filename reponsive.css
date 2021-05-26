@@ -636,9 +636,9 @@
     border-bottom: 1px solid white; }
   /*반응형 스위치*/
   .view-m {
-    display: block; }
+    display: block !important; }
   .view-p {
-    display: none; }
+    display: none !important; }
   .mainText {
     top: 30% !important; }
     .mainText p {
