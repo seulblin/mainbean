@@ -1,0 +1,67 @@
+@import 'style.scss';
+
+/*반응형 잡기*/
+$mobile : 1024px;
+@mixin mobile-only {
+  @media screen and (max-width:#{$mobile +1 }) {
+    @content;
+  }
+}
+
+
+
+@include mobile-only{
+  
+  .header{
+    background: $main-color;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  /*반응형 스위치*/
+  .view-m{ display:block; }
+  .view-p{ display:none; }
+  .mainText{
+    top: 30% !important;
+    p{
+      font-size: 32px !important;
+    }
+    
+  }
+  .arrow-wrap{
+    position: absolute !important;
+    top: 47px !important;
+    padding: 10px 0 !important;
+    right: 0px !important;
+  }
+  .customer.customerOpen{
+    padding:0 0px !important;
+  }
+  .main-content{
+    padding: 0 !important;
+  }
+  .title-move{
+    left:0;
+  }
+
+  .grid-container{
+    grid-template-columns:repeat(1, 1fr) !important;
+    .grid-border{
+      margin-top: 0 !important;
+    }
+  }
+  .even-num{
+    transform: translateY(0);
+  }
+  .main-pag{
+    left:50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .main-btn-prev{
+    left:80px !important;
+  }
+
+  .keyword{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+}
